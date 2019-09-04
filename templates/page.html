@@ -1,44 +1,59 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Fanpage</title>
-    <style tpye="text/css">
-
-        #video-bg-elem {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            transform: translateX(-50%) translateY(-50%);
-        }
-        /*.image-cropper {*/
-        /*    width: 100px;*/
-        /*    height: 100px;*/
-        /*    position: relative;*/
-        /*    overflow: hidden;*/
-        /*    border-radius: 50%;*/
-        /*}*/
-    </style>
-  </head>
+<head>
+    <link rel="stylesheet" href="/stuff/style.css" type="text/css"/>
+</head>
     
-  <body>
+    <body>
+        
+        <div class="section">
+            <h1>Tom Misch</h1>
+        
+            <div id="vidground">
+            <!--video element tomvid autoplays and is muted-->
+            <video autoplay loop muted>
+              <source src="tomvid.mp4" type="video/mp4">
+            </video>
+            
+            </div>
+        
+        </div>
+        
+        <div>
+          {{ song_lyrics|safe }}
+        </div>
+        
+    </body>
+    
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <link rel="stylesheet" type="text/css" href="/static/mystyle.css">-->
+<!--    <title>Leon's Fanboy Page</title>-->
+    
+        
+        <!--/*.image-cropper {*/-->
+        <!--/*    width: 100px;*/-->
+        <!--/*    height: 100px;*/-->
+        <!--/*    position: relative;*/-->
+        <!--/*    overflow: hidden;*/-->
+        <!--/*    border-radius: 50%;*/-->
+        <!--/*}*/-->
+<!--  </head>-->
+    
+<!--  <body>-->
       
-      <div class="background-wrap">
+<!--      <div class="background-wrap">-->
+<!--          <video id="video-bg-elem" preload ="auto" autoplay loop muted>-->
+<!--          <source src="/static/tomvid.mp4" type="video/mp4">-->
+<!--          <source src="/statoc/tomvid.webm" type="video/mp4">-->
+<!--          </video>-->
           
-          <video id="video-bg-elem" preload ="auto" autoplay ="true" loop="loop" muted="muted">
-          <source src="/static/tomvid.mp4" type="video/mp4">
-          <source src="/statoc/tomvid.webm" type="video/mp4">
-          </video>
-          
-      </div>
+<!--      </div>-->
       
-      <!--<div class="image-cropper">-->
-      <!--    <img src="/static/tom books portrait.jpg" class="rounded" />-->
-      <!--</div>-->
+<!--      <div>-->
+<!--          <img id="artist_photo" src="/static/tom books portrait.jpg">-->
+<!--      </div>-->
       
       
       <!--<div class="content">-->
@@ -54,7 +69,6 @@
       <!--    <a class="twitter-timeline" data-width="228" data-height="203" data-theme="light" data-link-color="#E95F28" href="https://twitter.com/TomMisch?ref_src=twsrc%5Etfw">Tweets by TomMisch</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
      
       <!--</div>-->
-      
     
-    </body>
-</html>
+<!--    </body>-->
+<!--</html>-->
