@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+
+  <body>
+    <video autoplay loop muted>
+          <source src="/static/tomvid.mp4" type="video/mp4">
+          <source src="/statoc/tomvid.webm" type="video/mp4">
+    </video>
+
+    <img src={{song_art}} height="30">
+    
+    <h1>{{song_fulltitle}}</h1>
+    
+    <h3>Lyrics</h3>
+    <!--accepting lyrics embeded content in html-->
+    {{ song_lyrics|safe }} 
+    </body>
+</html>
