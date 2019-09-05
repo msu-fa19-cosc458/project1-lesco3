@@ -12,7 +12,6 @@ import requests_oauthlib
 
 # app execution name is appli
 appli = Flask(__name__)
-@appli.route("/")
 
 # defining authorization header in myheader :)
 myheader = {"Authorization": "Bearer eTnvJMtGEvFKJVrj72lNjVZzXgtyE1xD6Q-Unv2A0Amjhgfx-DEo-1oEUnipH87b"}
@@ -38,7 +37,7 @@ access_token_secret = 'KRTf4ZH4mFzMKQlpRXUhdcbvYblWu5BCAz84j3v4sKCIo'
 song_id=[2822805, 3555892, 3300945, 3555889, 2480970, 3458461, 2823483] # multiple songs to randomly generate
 # main route, returns .json api data to page.html 
 # uses render_template to access page.html
-
+@appli.route("/")
 
 def crawling():
     
