@@ -1,43 +1,93 @@
 <!DOCTYPE html>
 <html>
+    
    <head>
-        <link rel="stylesheet" type="text/css" href="/static/mystyle.css"/>
-    </head>
+        <link rel="stylesheet" type="text/css" href="/static/design.css"/>
+   </head>
+      
+    <!--im not a js master so i googled a function for fading elements and changed a few variables-->
+   <script type="text/javascript">
+            function fade(element) {
+                var op = 1;  // initial opacity
+                var timer = setInterval(function () {
+                if (op <= 0.1){
+                    clearInterval(timer);
+                    element.style.display = 'none';
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, 50);
+        }
+    </script>
         
         <body>
-            <img src={{song_art}}>
-            
             <div class="section">
-                
-                <h1> {{ song_title }} </h1>
-              
-                <!--<div>-->
-                <!--video element tomvid autoplays and is muted-->
-                <!--<video id="vidground" autoplay loop muted>-->
-                <!--  <source src="/static/tomvid.mp4" type="video/mp4">-->
-                <!--</video>-->
-                
-                <!--</div>-->
-            
+                <h1 onclick="fade(this)"> {{ song_title }} </h1>
             </div>
             
+            <div>
+                <img src={{song_art}}>
+            </div>
             
-                {% if choice_num == "3300945": %}
-                    <div><video src="/static/tom books portrait.jpg"></div>
+    
+                <!-- song id-keys-->
+                <!-- 2822805 - crazy dream-->
+                <!-- 3555892 - man like you-->
+                <!-- 3300945 - movie-->
+                <!-- 3555889 - runs through-->
+                <!-- 2480970 - watch dance-->
+                <!-- 3458461 - water baby-->
+                <!-- 2823483 - wish-->
+            
+                <!--jinga2 is freaking awesome!!!! -->
+                <!--and yes i think i couldve just made a custom media (object) -->
+                <!--but i dont have too much time before the due date to tinker and destroy something lol-->
+                {% if choice_num == "2822805": %}
+                    <div>
+                        <video src="/static/media/crazy dream.mp4" autoplay muted loop>
+                        <audio src="/static/media/crazy dream.mp3" autoplay loop>
+                        
+                    </div>
+                {% elif choice_num == "3555892": %}
+                    <div>
+                        <video src="/static/media/man like you.mp4" autoplay muted loop>
+                        <audio src="/static/media/man like you.mp3" autoplay loop>
+                        
+                    </div>
+                {% elif choice_num == "3300945": %}
+                    <div>
+                        <video src="/static/media/movie.mp4" autoplay muted loop>
+                        <audio src="/static/media/movie.mp3" autoplay loop>
+                        
+                    </div>
+                {% elif choice_num == "3555889": %}
+                    <div>
+                        <video src="/static/media/runs through.mp4" autoplay muted loop>
+                        <audio src="/static/media/runs through.mp3" autoplay loop>
+                        
+                    </div>
+                {% elif choice_num == "2480970": %}
+                    <div>
+                        <video src="/static/media/watch dance.mp4" autoplay muted loop>
+                        <audio src="/static/media/watch dance.mp3" autoplay loop>
+                        
+                    </div>
                 {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
-                {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
-                {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
-                {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
-                {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
-                {% elif choice_num == "484106": %}
-                    <div><video src="/static/tomvid.mp4"></div>
+                    <div>
+                        <video src="/static/media/water baby.mp4" autoplay muted loop>
+                        <audio src="/static/media/water baby.mp3" autoplay loop>
+                        
+                    </div>
+                {% elif choice_num == "2823483": %}
+                    <div>
+                        <video src="/static/media/wish.mp4" autoplay muted loop>
+                        <audio src="/static/media/wish.mp3" autoplay loop>
+                        
+                    </div>
                 {% endif %}
             
+            {{ song_string }}
         </body>
         
     </html>
