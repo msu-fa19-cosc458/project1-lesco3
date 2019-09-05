@@ -75,9 +75,9 @@ def crawling():
                     choice_num=choice_num,
                     song_art= song_json['response']['song']['song_art_image_url'],
                     song_title = song_json['response']['song']['full_title'],
-                    song_lyrics = song_json['response']['song']['embed_content'],
-                    artist_photo = song_json['response']['song']['primary_artist']['header_image_url'],
-                    artist_link = song_json['response']['song']['primary_artist']['url'],
-                    song_string = tweet['text'])
+                    artist_photo = song_json['response']['song']['primary_artist']['image_url'],
+                    song_lyrics = song_json['response']['song']['url'],                
+                    song_link = song_json['response']['song']['primary_artist']['url'],
+                    quotes = tweet['text'])
 
 appli.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)), debug=True)
