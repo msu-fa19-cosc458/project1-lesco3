@@ -8,7 +8,8 @@ import os
 import requests
 import json
 import random
-import requests_oauthlib, requests
+import requests_oauthlib
+
 # app execution name is appli
 appli = Flask(__name__)
 
