@@ -6,9 +6,13 @@
  ----------------------------------------------------------------- 
 
 
-Hi there! Welcome to AWS Cloud9!
+dang was this some 
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
-
-Happy coding!
+Problems: 
+1. craziest issue with getting mystyle.css to link to index.html
+2. trouble parsing twitter data from twitter api queries
+3. couldnt figure out how to display new data on page refreshes
+4. getting elements to overlay video background
+5. making the videobackground static even when scrolling
+6. making the video background fill screen in all aspect ratios
+7. 
