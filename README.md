@@ -15,7 +15,7 @@ Problems:
 
 5. making the videobackground static even when scrolling: this just took a lot of research, but essentially filly the margins 100% and making the video static did the trick
 
-<b>6. I failed in setting up config keys. This was really disappointing to me.... i should've started doing this earlier in the dev process<b>
+<b>6. I failed in setting up config keys. This was really disappointing to me.... i should've started doing this earlier in the dev process</b>
 
 7. My biggest failure was generating a new tweet each time the screen is refreshed. I'm not sure if my search terms were to specific but for the most part my implementations of get.search twitter api didnt return a new tweet every refresh...I tried to dig into this issue quite a bit but it became too time consuming so I just sort-of archived the code and went with another api just for retreiving exact tweets
 
