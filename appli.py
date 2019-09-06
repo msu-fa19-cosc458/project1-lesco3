@@ -39,7 +39,7 @@ song_id=[2822805, 3555892, 3300945, 3555889, 2480970, 3458461, 2823483] # multip
 # uses render_template to access page.html
 @appli.route("/")
 
-def crawling():
+def crawl():
     
     oauth = requests_oauthlib.OAuth1(
     consumer_key, 
@@ -77,8 +77,8 @@ def crawling():
                     song_art= song_json['response']['song']['song_art_image_url'],
                     song_title = song_json['response']['song']['full_title'],
                     artist_photo = song_json['response']['song']['primary_artist']['image_url'],
-                    song_lyrics = song_json['response']['song']['url'],                
-                    song_link = song_json['response']['song']['primary_artist']['url'],
+                    song_page = song_json['response']['song']['url'],
+                    artist_page = song_json['response']['song']['primary_artist']['url'],
                     quotes = tweet['text'])
 
 appli.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)), debug=True)
