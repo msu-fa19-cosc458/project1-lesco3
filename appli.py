@@ -37,25 +37,28 @@ access_token_secret = 'KRTf4ZH4mFzMKQlpRXUhdcbvYblWu5BCAz84j3v4sKCIo'
 song_id=[2822805, 3555892, 3300945, 3555889, 2480970, 3458461, 2823483] # multiple songs to randomly generate
 # main route, returns .json api data to page.html 
 # uses render_template to access page.html
+
+oauth = requests_oauthlib.OAuth1(
+consumer_key, 
+consumer_secret,
+access_token,
+access_token_secret
+)
+    
+quotes = ["https://api.twitter.com/1.1/statuses/show.json?id=1166773007311757312",
+"https://api.twitter.com/1.1/statuses/show.json?id=1167786867309236225",
+"https://api.twitter.com/1.1/statuses/show.json?id=1166815731574595586",
+"https://api.twitter.com/1.1/statuses/show.json?id=1167849254578094080",
+"https://api.twitter.com/1.1/statuses/show.json?id=1167422802799951875",
+"https://api.twitter.com/1.1/statuses/show.json?id=1167526175331106816",
+"https://api.twitter.com/1.1/statuses/show.json?id=1168930118464659456",
+"https://api.twitter.com/1.1/statuses/show.json?id=1167082122047348737"]
+    
 @appli.route("/")
 
 def crawl():
     
-    oauth = requests_oauthlib.OAuth1(
-    consumer_key, 
-    consumer_secret,
-    access_token,
-    access_token_secret
-    )
-    
-    quotes = ["https://api.twitter.com/1.1/statuses/show.json?id=1166773007311757312",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1167786867309236225",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1166815731574595586",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1167849254578094080",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1167422802799951875",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1167526175331106816",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1168930118464659456",
-    "https://api.twitter.com/1.1/statuses/show.json?id=1167082122047348737"]
+   
     
     choice_num=str(random.choice(song_id))
     quotes_rand=random.choice(quotes)
