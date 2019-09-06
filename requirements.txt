@@ -1,2 +1,6 @@
 Flask
+os
 requests
+json
+random
+requests_oauthlib
